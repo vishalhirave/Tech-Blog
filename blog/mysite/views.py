@@ -76,3 +76,7 @@ def post_publish(request,pk):
     post=get_object_or_404(Post,pk=pk)
     post.publish()
     return redirect('post_detail',pk=pk)
+
+
+def test_form(request):
+    return render(request,'mysite/test_form.html')
